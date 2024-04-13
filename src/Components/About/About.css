@@ -1,0 +1,114 @@
+@keyframes spin-circle {
+  from {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+}
+
+.animate-spin-circle {
+  animation: spin-circle 5s linear infinite;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 100vmax;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: url("https://t4.ftcdn.net/jpg/02/97/19/75/360_F_297197561_4dh7GE3s6NFJXkd1OLSfSZsO6XjnwFFq.jpg");
+  background-size: cover;
+  border-radius: 100vmax;
+  background-position: center;
+}
+
+.text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: consolas;
+  color: #000;
+  font-size: 17px;
+  animation: textRotation 8s linear infinite;
+}
+
+@keyframes textRotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.text span {
+  position: absolute;
+  left: 50%;
+  font-size: 1.2em;
+  transform-origin: 0 100px;
+}
+
+.animation {
+  height: 3vw;
+  overflow: hidden;
+}
+
+.animation > div > div {
+  height: 3vw;
+  display: inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 14s infinite;
+}
+@keyframes text-animation {
+  0% {
+    margin-top: 0;
+  }
+  10% {
+    margin-top: -3vw;
+  }
+  20% {
+    margin-top: -6vw;
+  }
+  30% {
+    margin-top: -9vw;
+  }
+  40% {
+    margin-top: -6vw;
+  }
+  60% {
+    margin-top: -3vw;
+  }
+  70% {
+    margin-top: 0vw;
+  }
+  80% {
+    margin-top: -3vw;
+  }
+  90% {
+    margin-top: -6vw;
+  }
+  100% {
+    margin-top: -3vw;
+  }
+}

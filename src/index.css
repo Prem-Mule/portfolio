@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "FoundersGrotesk";
+  src: url("./Fonts/FoundersGrotesk-Semibold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("./Fonts/NeueMontreal-Regular.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "oswald";
+  src: url("./Fonts/Oswald-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "helvetica";
+  src: url("./Fonts/HelveticaNowDisplay-Bold.woff2") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "august";
+  src: url("./Fonts/August-Bold.woff2") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+*::selection {
+  color: aquamarine;
+}
