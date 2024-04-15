@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-
+import '../Navigation/Navigation.css'
 function Navigation() {
   return (
     <div className="text-zinc-200 tracking-wider h-[12vh] flex items-center justify-evenly font-['helvetica'] bg-zinc-950  gap-[10vw]">

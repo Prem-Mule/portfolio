@@ -14,31 +14,24 @@ function About() {
       .split("")
       .map(
         (char, i) =>
-          `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`
+          `<span style="transform:rotate(${i * 10}deg)">${char}</span>`
       )
       .join("");
   }, []);
-  const changeRole = () => {
-    setRoleIndex((prevIndex) =>
-      prevIndex === roles.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  setInterval(changeRole, 3000);
 
   const roles = [" Fullstack Developer ", " Software Developer "];
   const [roleIndex, setRoleIndex] = useState(0);
-  let setroles = () => {
-    if (roleIndex) {
-      setRoleIndex(0);
-      <p>{roles[roleIndex + 1]}</p>;
-    } else {
-      setRoleIndex(1);
-      <p>{roles[roleIndex - 1]}</p>;
-    }
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRoleIndex((prevIndex) =>
+        prevIndex === roles.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
-    <div className="h-[100vh] bg-zinc-300 rounded-l-[3vw] rounded-tr-[12vw] p-[4vw] flex relative">
+    <div className="min-h-[50vw] bg-zinc-300 rounded-l-[3vw] rounded-tr-[12vw] p-[4vw] flex relative">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -55,7 +48,7 @@ function About() {
           className="w-[40vw] absolute top-[-5vw] left-[8vw] "
         />
       </motion.div>
-      <div className="right text-zinc-900 font-['oswald'] text-[2vw] pt-[7vw]">
+      <div className="right text-zinc-900 font-['oswald'] text-[2vw] pt-[7vw] max-w-full">
         <h2 className="text-justify">
           Hello, I'm Prem Kiran Mule, a passionate
           {/* <section className="animation w-[19vw] h-[3vw] absolute   top-[23%] right-[6vw] ">
@@ -69,15 +62,7 @@ function About() {
               <div>FullStack Developer</div>
             </div>
           </section> */}
-          {/* <motion.span
-            initial={{ opacity: 0 }}
-            transition={{ ease: "easeInOut", duration: 1.3 }}
-            whileInView={{ opacity: 1 }}
-            className="inline-block"
-          >
-            {roles[roleIndex]}
-          </motion.span> */}
-          {roles.map((role, index) => (
+          {/* {roles.map((role, index) => (
             <motion.span
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
@@ -89,8 +74,19 @@ function About() {
             >
               {role}
             </motion.span>
-          ))}
+          ))} */}
           {/* </div> */}
+          <motion.span
+            initial={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" }}
+            animate={{
+              clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+            }}
+            transition={{ duration: 1.5 }}
+            className=""
+            index={roleIndex}
+          >
+            {roles[roleIndex]}
+          </motion.span>{" "}
           {/* <marquee
               direction="up"
               className="w-[16vw] h-[2vw] italic transition-all ease-linear "
@@ -102,10 +98,10 @@ function About() {
           solutions. I thrive on challenges and believe in the power of
           collaboration to drive meaningful change in the tech world.
         </h2>
-        <div className="circle mt-[4vw] ml-[35vw]">
-          <div className="logo"></div>
-          <div className="text">
-            <p>Passionate- Driven </p>
+        <div className="circle mt-[5vw] ml-[35vw] w-[7vw] h-[7vw]">
+          <div className="logo w-[7vw] h-[7vw]"></div>
+          <div className="text ">
+            <p>Passionate- Driven- </p>
           </div>
         </div>
       </div>

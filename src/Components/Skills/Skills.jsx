@@ -3,26 +3,29 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import "../Skills/Skills.css";
 
 function Skills() {
-  const [cursorPosition, setcursorPosition] = useState({ x: 0, y: 0 });
+  const [cursorPosition, setcursorPosition] = useState({ y: 0 });
   const [cursorScale, setcursorScale] = useState(0);
   return (
     <div
       data-scroll
       data-scroll-section
       data-scroll-speed="0.4"
-      className="h-[65vw] bg-zinc-950 -mt-[3vw] p-[6vw] relative"
+      className="skills min-h-[65vw] bg-zinc-950 -mt-[3vw] p-[6vw] relative max-w-screen"
     >
       <div
-        className="cursor w-[8vw] h-[8vw] bg-cyan-500 blur-xl fixed rounded-full translate-x-[-50%] translate-y-[-50%] z-[0] "
+        className="cursor w-[20vw] h-[20vw] bg-cyan-400 blur-2xl bg-opacity-15 absolute rounded-full translate-x-[-50%] translate-y-[-50%] z-[0] "
         style={{
           left: cursorPosition.x,
           top: cursorPosition.y,
           opacity: cursorScale,
-          transition: "all 0.3s ease",
+          transition: "all  ease-in-out",
         }}
-      ></div>
+      >
+        <div className="w-[10vw] h-[10vw] rounded-full bg-cyan-400 blur-2xl absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
+      </div>
       <div
         className="foreground absolute z-[1] hover:cursor-pointer "
         onMouseMove={(loc) => {
@@ -43,16 +46,16 @@ function Skills() {
         >
           Skills
         </motion.h1>
-        <div className="skillset flex flex-wrap justify-center gap-x-[5vw]">
+        <div className="skillset flex flex-wrap justify-center gap-x-[2vw]">
           <motion.div
-            initial={{ x: -100, scale: 0.4 }}
-            whileInView={{ x: 0, scale: 1 }}
+            initial={{ scale: 0.4 }}
+            whileInView={{ scale: 1 }}
             transition={"cubic - bezier(0.34, 1.56, 0.64, 1) "}
             className="frontendskills uppercase font-['oswald'] text-white bg-zinc-700 w-[30vw] shadow-custom p-[1.3vw] m-[2vw] hover:cursor-grab hover:scale-[0.9] transition-all ease duration-[1s]"
           >
             <h1 className="text-center text-[1.6vw]">Frontend </h1>
             <li className="list-none">
-              <h3>html</h3>
+              <h3 className="item">html</h3>
               <span className="bar  block bg-cyan-800 h-[1.3vw] text-white mt-[0.6vw] mb-[0.6vw] border-[1px] border-solid shadow-bar border-cyan-700 hover:shadow-barHover">
                 <motion.div
                   initial={{ width: 0 }}
@@ -63,7 +66,7 @@ function Skills() {
               </span>
             </li>
             <li className="list-none">
-              <h3>css</h3>
+              <h3 className="item">css</h3>
               <span className="bar  block bg-cyan-800 h-[1.3vw] text-white mt-[0.6vw] mb-[0.6vw] border-[1px] border-solid shadow-bar border-cyan-700 hover:shadow-barHover">
                 <motion.div
                   initial={{ width: 0 }}
@@ -74,7 +77,7 @@ function Skills() {
               </span>
             </li>
             <li className="list-none">
-              <h3>javascript</h3>
+              <h3 className="item">javascript</h3>
               <span className="bar  block bg-cyan-800 h-[1.3vw] text-white mt-[0.6vw] mb-[0.6vw] border-[1px] border-solid shadow-bar border-cyan-700 hover:shadow-barHover">
                 <motion.div
                   initial={{ width: 0 }}
@@ -85,7 +88,7 @@ function Skills() {
               </span>
             </li>
             <li className="list-none">
-              <h3>react</h3>
+              <h3 className="item">react</h3>
               <span className="bar  block bg-cyan-800 h-[1.3vw] text-white mt-[0.6vw] mb-[0.6vw] border-[1px] border-solid shadow-bar border-cyan-700 hover:shadow-barHover">
                 <motion.div
                   initial={{ width: 0 }}
@@ -97,14 +100,14 @@ function Skills() {
             </li>
           </motion.div>
           <motion.div
-            initial={{ x: 100, scale: 0.4 }}
-            whileInView={{ x: 0, scale: 1 }}
+            initial={{ scale: 0.4 }}
+            whileInView={{ scale: 1 }}
             transition={"cubic - bezier(0.34, 1.56, 0.64, 1) "}
             className="programmingLang uppercase font-['oswald'] text-white bg-zinc-700 w-[30vw] shadow-custom p-[1.3vw] m-[2vw] hover:cursor-grab hover:scale-[0.9] transition-all ease duration-[1s] "
           >
             <h1 className="text-center text-[1.6vw]">Programming Languages </h1>
             <li className="list-none">
-              <h3>Java</h3>
+              <h3 className="item">Java</h3>
               <span className="bar  block bg-cyan-800 h-[1.3vw] text-white mt-[0.6vw] mb-[0.6vw] border-[1px] border-solid shadow-bar border-cyan-700 hover:shadow-barHover">
                 <motion.div
                   initial={{ width: 0 }}
@@ -115,7 +118,7 @@ function Skills() {
               </span>
             </li>
             <li className="list-none">
-              <h3>C++</h3>
+              <h3 className="item">C++</h3>
               <span className="bar  block bg-cyan-800 h-[1.3vw] text-white mt-[0.6vw] mb-[0.6vw] border-[1px] border-solid shadow-bar border-cyan-700 hover:shadow-barHover">
                 <motion.div
                   initial={{ width: 0 }}
@@ -126,7 +129,7 @@ function Skills() {
               </span>
             </li>
             <li className="list-none">
-              <h3>Python</h3>
+              <h3 className="item">Python</h3>
               <span className="bar  block bg-cyan-800 h-[1.3vw] text-white mt-[0.6vw] mb-[0.6vw] border-[1px] border-solid shadow-bar border-cyan-700 hover:shadow-barHover">
                 <motion.div
                   initial={{ width: 0 }}
@@ -138,14 +141,14 @@ function Skills() {
             </li>
           </motion.div>
           <motion.div
-            initial={{ x: -100, scale: 0.4 }}
-            whileInView={{ x: 0, scale: 1 }}
+            initial={{ scale: 0.4 }}
+            whileInView={{ scale: 1 }}
             transition={"cubic - bezier(0.34, 1.56, 0.64, 1) "}
             className="backendskills uppercase font-['oswald'] text-white bg-zinc-700 w-[30vw] shadow-custom p-[1.3vw] m-[2vw] hover:cursor-grab hover:scale-[0.9] transition-all ease duration-[1s]"
           >
             <h1 className="text-center text-[1.6vw]">Backend </h1>
             <li className="list-none">
-              <h3>NODEJS</h3>
+              <h3 className="item">NODEJS</h3>
               <span className="bar  block bg-cyan-800 h-[1.3vw] text-white mt-[0.6vw] mb-[0.6vw] border-[1px] border-solid shadow-bar border-cyan-700 hover:shadow-barHover ">
                 <motion.div
                   initial={{ width: 0 }}
@@ -156,7 +159,7 @@ function Skills() {
               </span>
             </li>
             <li className="list-none">
-              <h3>ExpressJS</h3>
+              <h3 className="item">ExpressJS</h3>
               <span className="bar  block bg-cyan-800 h-[1.3vw] text-white mt-[0.6vw] mb-[0.6vw] border-[1px] border-solid shadow-bar border-cyan-700 hover:shadow-barHover">
                 <motion.div
                   initial={{ width: 0 }}
@@ -168,14 +171,14 @@ function Skills() {
             </li>
           </motion.div>
           <motion.div
-            initial={{ x: 100, scale: 0.4 }}
-            whileInView={{ x: 0, scale: 1 }}
+            initial={{ scale: 0.4 }}
+            whileInView={{ scale: 1 }}
             transition={"cubic - bezier(0.34, 1.56, 0.64, 1) "}
             className="databases uppercase font-['oswald'] text-white bg-zinc-700 w-[30vw] shadow-custom p-[1.3vw] m-[2vw] hover:cursor-grab hover:scale-[0.9] transition-all ease duration-[1s]"
           >
             <h1 className="text-center text-[1.6vw]">Databases </h1>
             <li className="list-none">
-              <h3>MYSQL</h3>
+              <h3 className="item">MYSQL</h3>
               <span className="bar  block bg-cyan-800 h-[1.3vw] text-white mt-[0.6vw] mb-[0.6vw] border-[1px] border-solid shadow-bar border-cyan-700 hover:shadow-barHover">
                 <motion.div
                   initial={{ width: 0 }}
@@ -186,7 +189,7 @@ function Skills() {
               </span>
             </li>
             <li className="list-none">
-              <h3>MONGODB</h3>
+              <h3 className="item">MONGODB</h3>
               <span className="bar  block bg-cyan-800 h-[1.3vw] text-white mt-[0.6vw] mb-[0.6vw] border-[1px] border-solid shadow-bar border-cyan-700 hover:shadow-barHover">
                 <motion.div
                   initial={{ width: 0 }}

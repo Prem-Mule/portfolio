@@ -1,0 +1,13 @@
+@media (max-width: 600px) {
+  .skills {
+    margin-bottom: 30vh;
+  }
+}
+@media (max-width: 1000px) {
+  .skills {
+    margin-bottom: 40vh;
+  }
+  .item {
+    font-size: 2vw;
+  }
+}

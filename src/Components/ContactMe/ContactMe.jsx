@@ -35,15 +35,15 @@ function ContactMe() {
               <form className="text-[1.4vw]">
                 <div className="mb-[2vw]">
                   <label
-                    htmlFor="name"
+                    htmlFor="fullname"
                     className="block text-gray-700 font-medium mb-1"
                   >
                     What's your name?
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
+                    id="fullname"
+                    name="fullname"
                     placeholder="Prem"
                     className="w-full px-4 py-2 rounded border-none bg-transparent focus:outline-none focus:border-blue-500"
                   />

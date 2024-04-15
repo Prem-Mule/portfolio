@@ -2,14 +2,14 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
-
+import "../ExperienceEdu/ExperienceEdu.css";
 function ExperienceEdu() {
   return (
     <div
       data-scroll
       data-scroll-section
       data-scroll-speed="-0.2"
-      className=" timeline p-[5vw] text-white relative w-[90vw] m-auto font-['helvetica'] font-bold rounded-md bg-gradient-to-b from-zinc-950 to-zinc-900"
+      className=" timeline p-[5vw] text-white relative max-w-[90vw] m-auto font-['helvetica'] font-bold rounded-md bg-gradient-to-b from-zinc-950 to-zinc-900"
     >
       <motion.div>
         <h1 className="text-[10vw] leading-[10vw] tracking-tighter mb-[2vw] ">
@@ -54,7 +54,7 @@ function ExperienceEdu() {
             <h1 className="text-[1vw] text-cyan-500 font-extrabold">
               Energybae Pvt. Ltd.
             </h1>
-            <p className="text-justify">
+            <p className="pl-[2vw]">
               <ul className="list-disc">
                 <li>
                   Developed and integrated APIs for email and PDF generation
@@ -98,7 +98,7 @@ function ExperienceEdu() {
             <h1 className="text-[1vw] text-cyan-500 font-extrabold">
               Internshala
             </h1>
-            <p className="text-justify">
+            <p className="pl-[2vw]">
               <ul className="list-disc">
                 <li>
                   Organizing and promoting Internshala's initiatives and
@@ -150,7 +150,7 @@ function ExperienceEdu() {
           <h1 className="text-[1vw] text-cyan-500 font-extrabold">
             Current SGPA: 9.32{" "}
           </h1>
-          <p className="text-justify">
+          <p className="pl-[2vw]">
             <ul className="list-disc">
               <li>Rank: 3rd in SPPU University</li>
               <li>Pursuing, Expected Graduation: June 2024</li>
@@ -184,7 +184,7 @@ function ExperienceEdu() {
           <h1 className="text-[1vw] text-cyan-500 font-extrabold">
             Percentage: 88%
           </h1>
-          <p className="text-justify">
+          <p className="pl-[2vw]">
             <ul className="list-disc">
               <li>Year of Completion: 2020</li>
             </ul>
@@ -214,7 +214,7 @@ function ExperienceEdu() {
           <h1 className="text-[1vw] text-cyan-500 font-extrabold">
             Percentage: 95.20%
           </h1>
-          <p className="text-justify">
+          <p className="pl-[2vw]">
             <ul className="list-disc">
               <li>Year of Completion: 2018</li>
             </ul>

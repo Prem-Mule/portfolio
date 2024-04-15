@@ -11,8 +11,9 @@
     height: 80vh;
     padding-top: 10vh;
   }
-  .name {
-    font-size: 20vw;
+
+  #nameprem {
+    font-size: 26vw;
   }
   .hello > p {
     font-size: 3.5vw;
@@ -22,10 +23,25 @@
   }
   .desc {
     padding-top: 3vh;
-    margin-left: 8vw;
-    margin-right: 8vw;
+    margin-left: 3vw;
+    margin-right: 2vw;
   }
   .desc > p {
     font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 500px) {
+  #name {
+    background-color: red;
+  }
+  #nameprem {
+    font-size: 26vw;
+  }
+  .desc {
+    padding-top: 3vh;
+    margin-left: 4vw;
+    margin-right: 0;
+    padding: 0;
   }
 }

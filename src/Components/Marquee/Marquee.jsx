@@ -7,15 +7,12 @@ import { motion } from "framer-motion";
 
 function Marquee() {
   return (
-    <div
-  
-      className="marquee relative mb-[4vw]"
-    >
+    <div className="marquee relative mb-[4vw] min-h-[20vh] bg-zinc-950">
       <div className="  bg-blue-500 flex rotate-[2deg] mt-[-2vw] absolute z-[2]">
         <marquee
           behavior=""
           direction=""
-          scrollamount="30"
+          scrollamount="22"
           loop="-1"
           className="text-[3.5vw]  leading-none uppercase font-['FoundersGrotesk']  text-white "
         >
@@ -27,7 +24,7 @@ function Marquee() {
         <marquee
           behavior=""
           direction="right"
-          scrollamount="30"
+          scrollamount="22"
           loop="-1"
           className="text-[3.5vw]  leading-none uppercase font-['FoundersGrotesk']  text-white "
         >

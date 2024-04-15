@@ -19,12 +19,12 @@ function Hero() {
       className=" hero text-white font-bold tracking-widest  bg-zinc-950 px-[3vw] min-h-[90vh]"
     >
       <div
-        className="cursor1 w-[6vw] h-[6vw] bg-white absolute rounded-full translate-x-[-50%] translate-y-[-50%] z-[2]"
+        className="cursor1 w-[6vw] h-[6vw] bg-white absolute rounded-full translate-x-[-50%] translate-y-[-50%] z-[2] "
         style={{
           left: cursorPosition.x,
           top: cursorPosition.y,
           opacity: cursorScale,
-          transition: "all 0.3s ease",
+          transition: "all  ease-in-out",
           mixBlendMode: "difference",
         }}
       ></div>
@@ -38,14 +38,16 @@ function Hero() {
           setCursorScale(0);
         }}
         onMouseEnter={() => {
-          // Add this
           setCursorScale(100);
         }}
       >
         <h3 className="hello font-bold text-blue-600 text-[2.1vw]">
           <p> Hello it's Me</p>
         </h3>
-        <motion.h1 className="name font-['august'] font-extrabold leading-[26vw] mt-[4vw] text-[28vw]  text-white overflow-hidden mb-[15vh]">
+        <motion.h1
+          id="nameprem"
+          className="name font-['august'] font-extrabold leading-[26vw] mt-[4vw] text-[28vw]  text-white overflow-hidden mb-[15vh]"
+        >
           {/* PREM MULE */}
           {"PREM  MULE".split("").map((item, index) => {
             return (
@@ -55,7 +57,13 @@ function Hero() {
                 transition={{ ease: [0.34, 1.56, 0.64, 1], delay: index * 0.1 }}
                 className="inline-block"
               >
-                {index == 4 ? <p className="w-[4vw]"> </p> : item}
+                {index == 4 ? (
+                  <p className="w-[4vw]" id="prem">
+                    {" "}
+                  </p>
+                ) : (
+                  item
+                )}
               </motion.div>
             );
           })}

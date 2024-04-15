@@ -1,0 +1,10 @@
+@media (max-width: 1000px) {
+  ul {
+    font-size: 1.4vw;
+  }
+}
+@media (max-width: 600px) {
+  ul {
+    font-size: 2vw;
+  }
+}

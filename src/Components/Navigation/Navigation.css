@@ -1,0 +1,8 @@
+@media (max-width: 500px) {
+  .menu > h1 {
+    font-size: 2vw;
+  }
+  .menu{
+    gap: 2vw;
+  }
+}
