@@ -3,7 +3,9 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
-
+import githublogo from "../assets/Github.png";
+import linkedinlogo from "../assets/Linkedin.png";
+import premphoto from "../assets/Prem_Mule_PassportPhoto-removebg-preview-removebg-preview-modified.png";
 function ContactMe() {
   return (
     <div id="contact">
@@ -22,7 +24,7 @@ function ContactMe() {
               Ready to Begin? Let's Start Together{" "}
             </h2>
             <img
-              src="src\assets\Prem_Mule_PassportPhoto-removebg-preview-removebg-preview-modified.png"
+              src={premphoto}
               alt=""
               className="rounded-full border-[0.4vw] mb-[0.5vw]  w-[8vw] h-[8vw] object-contain border-zinc-400"
             />
@@ -102,22 +104,14 @@ function ContactMe() {
                   onClick="window.open(this.href,'_blank');return false;"
                   target="_blank"
                 >
-                  <img
-                    src="src\assets\Linkedin.png"
-                    alt=""
-                    className="h-[2vw]"
-                  />
+                  <img src={linkedinlogo} alt="" className="h-[2vw]" />
                 </a>{" "}
                 <a
                   href="https://github.com/Prem-Mule"
                   onClick="window.open(this.href,'_blank');return false;"
                   target="_blank"
                 >
-                  <img
-                    src="src\assets\Github.png"
-                    alt=""
-                    className="h-[4vw] mt-[0.7vw]"
-                  />
+                  <img src={githublogo} alt="" className="h-[4vw] mt-[0.7vw]" />
                 </a>
               </div>
               <hr className="border-zinc-400 my-[1.4vw]" />

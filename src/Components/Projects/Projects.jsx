@@ -4,6 +4,14 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import "../Projects/Projects.css";
+import greenova from "../assets/greenovass.png";
+import lumine from "../assets/luminess.png";
+import ochidesign from "../assets/ochi2ss.png";
+import applevision from "../assets/applevisionss.png";
+import auracart from "../assets/ecommercess.png";
+import twogood from "../assets/twogoodss.png";
+import changethecourse from "../assets/changethecoursess.png";
+
 const Projects = () => {
   const [isHovering, setisHovering] = useState(0);
   return (
@@ -56,11 +64,7 @@ const Projects = () => {
                 transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.7 }}
                 className="card shadow-custom min-w-full min-h-full rounded-lg  overflow-hidden  "
               >
-                <img
-                  src="src\assets\greenovass.png"
-                  alt="card1"
-                  className="w-[100%] h-[28vw]"
-                />
+                <img src={greenova} alt="card1" className="w-[100%] h-[28vw]" />
                 <div className=" descr w-[100%] text-[1.3vw] p-[0.4vw] bg-zinc-100 text-zinc-800 font-semibold font-['FoundersGrotesk'] px-[2vw]   text-justify">
                   <p>
                     Greenova - an environmental information system to promote
@@ -107,11 +111,7 @@ const Projects = () => {
                 transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.7 }}
                 className="card shadow-custom min-w-full min-h-full rounded-lg  overflow-hidden  flex flex-col"
               >
-                <img
-                  src="src\assets\twogoodss.png"
-                  alt="card1"
-                  className="w-[100%] h-[28vw]"
-                />
+                <img src={twogood} alt="card1" className="w-[100%] h-[28vw]" />
                 <div className="descr bg-zinc-700 text-[1.3vw] p-[0.4vw] text-zinc-100 font-semibold font-['FoundersGrotesk'] tracking-normal  pl-[2vw] pr-[2vw] text-justify ">
                   <p>
                     {" "}
@@ -162,7 +162,7 @@ const Projects = () => {
                 className="card shadow-custom min-w-full min-h-full rounded-lg  overflow-hidden  border-[1px] border-zinc-700 flex flex-col"
               >
                 <img
-                  src="src\assets\ochi2ss.png"
+                  src={ochidesign}
                   alt="card1"
                   className="w-[100%] h-[28vw] "
                 />{" "}
@@ -213,7 +213,7 @@ const Projects = () => {
                 className="card shadow-custom min-w-full min-h-full rounded-lg  overflow-hidden flex flex-col"
               >
                 <img
-                  src="src\assets\luminess.png"
+                  src={lumine}
                   alt="card1"
                   className="w-[100%] h-[28vw] object-cover"
                 />
@@ -266,11 +266,7 @@ const Projects = () => {
                 transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.7 }}
                 className="card shadow-custom min-w-full min-h-full rounded-lg  overflow-hidden  border-[1px] border-zinc-700 flex flex-col"
               >
-                <img
-                  src="src\assets\ecommercess.png"
-                  alt="card1"
-                  className="w-[100%] h-[28vw]"
-                />
+                <img src={auracart} alt="card1" className="w-[100%] h-[28vw]" />
                 <div className="descr bg-zinc-100 text-[1.3vw] p-[0.4vw] text-zinc-800 font-['FoundersGrotesk']   pl-[2vw] pr-[2vw] text-justify">
                   <p>
                     {" "}
@@ -318,7 +314,7 @@ const Projects = () => {
                 className="card shadow-custom min-w-full min-h-full rounded-lg  overflow-hidden flex flex-col"
               >
                 <img
-                  src="src\assets\applevisionss.png"
+                  src={applevision}
                   alt="card1"
                   className="w-[100%] h-[28vw] object-cover"
                 />

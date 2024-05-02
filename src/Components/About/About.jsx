@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import "../About/About.css";
 import { motion } from "framer-motion";
 import "animate.css/animate.min.css";
-
+import premprofile from "../assets/Prem_Mule_PassportPhoto-removebg-preview-removebg-preview (1).png";
 function About() {
   useEffect(() => {
     const text = document.querySelector(".text");
@@ -43,7 +43,7 @@ function About() {
         </h1>
         <hr className="w-[14vw] border-black border-[0.2vw]" />
         <img
-          src="src\assets\Prem_Mule_PassportPhoto-removebg-preview-removebg-preview (1).png"
+          src={premprofile}
           alt=""
           className="w-[40vw] absolute bottom-[0%] left-[8vw] "
         />
