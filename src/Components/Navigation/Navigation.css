@@ -2,7 +2,15 @@
   .menu > h1 {
     font-size: 2vw;
   }
-  .menu{
+  .menu {
+    gap: 2vw;
+  }
+}
+@media (max-width: 1000px) {
+  .menu > h1 {
+    font-size: 1.8vw;
+  }
+  .menu {
     gap: 2vw;
   }
 }

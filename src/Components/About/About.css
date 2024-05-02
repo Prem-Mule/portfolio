@@ -50,3 +50,6 @@
   font-size: 1vw;
   transform-origin: 0 6vw;
 }
+
+@media (max-width: 600px) {
+}

@@ -15,17 +15,16 @@ function App() {
   const locomotiveScroll = new LocomotiveScroll();
 
   return (
-    <div className=" h-full min-w-screen bg-zinc-950 ">
+    <div className="app h-full max-w-screen bg-[#0a0a0a] ">
       <Navigation />
       <Hero />
-      <About />
+      <About id="about" />
       <Marquee />
-      <Projects />
-      <Skills />
+      <Projects id="projects" />
+      <Skills id="skills" />
       <ExperienceEdu />
-      <ContactMe />
+      <ContactMe id="contact" />
     </div>
   );
 }
-
 export default App;

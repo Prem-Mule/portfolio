@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
 @font-face {
   font-family: "FoundersGrotesk";
   src: url("./Fonts/FoundersGrotesk-Semibold.ttf") format("truetype");
@@ -34,4 +46,13 @@
 }
 *::selection {
   color: aquamarine;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgb(41, 41, 41);
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(15, 15, 15);
 }

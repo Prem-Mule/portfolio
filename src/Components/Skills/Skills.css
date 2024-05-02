@@ -2,6 +2,27 @@
   .skills {
     margin-bottom: 30vh;
   }
+  .skillsheader {
+    display: flex;
+    justify-content: center;
+  }
+  .skillsheader > p {
+    font-size: 9vw;
+  }
+  .skillset {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5vw;
+    width: 85vw;
+  }
+  .frontendskills,
+  .backendskills,
+  .programmingLang,
+  .databases {
+    width: 80vw;
+    background-color: magenta;
+    left: 50%;
+  }
 }
 @media (max-width: 1000px) {
   .skills {

@@ -31,7 +31,7 @@ function About() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="min-h-[50vw] bg-zinc-300 rounded-l-[3vw] rounded-tr-[12vw] p-[4vw] flex relative">
+    <div className="min-h-[50vw] bg-zinc-300 rounded-l-[3vw] rounded-tr-[12vw] p-[4vw] flex relative about w-full">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -45,7 +45,7 @@ function About() {
         <img
           src="src\assets\Prem_Mule_PassportPhoto-removebg-preview-removebg-preview (1).png"
           alt=""
-          className="w-[40vw] absolute top-[-5vw] left-[8vw] "
+          className="w-[40vw] absolute bottom-[0%] left-[8vw] "
         />
       </motion.div>
       <div className="right text-zinc-900 font-['oswald'] text-[2vw] pt-[7vw] max-w-full">

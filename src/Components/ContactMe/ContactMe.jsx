@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 function ContactMe() {
   return (
-    <div>
+    <div id="contact">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -14,7 +14,7 @@ function ContactMe() {
         data-scroll
         data-scroll-section
         data-scroll-speed="0.4"
-        className=" mx-auto px-4 bg-zinc-950"
+        className=" mx-auto px-4 bg-zinc-950  w-full"
       >
         <div className="ml-[3vw] mr-[3vw] mt-[3vw] bg-gray-100 rounded-t-[3vw] p-[4vw] ">
           <motion.div className="headingmsg flex items-center justify-center gap-[1vw]">
@@ -83,7 +83,7 @@ function ContactMe() {
                 </div>
                 <button
                   type="submit"
-                  className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300"
+                  className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
                 >
                   Send Message
                 </button>
@@ -97,17 +97,44 @@ function ContactMe() {
               </p>
               <hr className="border-zinc-400 my-[2vw]" />
               <div className=" ">
-                <img src="src\assets\Linkedin.png" alt="" className="h-[2vw]" />
-                <img
-                  src="src\assets\Github.png"
-                  alt=""
-                  className="h-[4vw] mt-[0.7vw]"
-                />
+                <a
+                  href="https://www.linkedin.com/in/prem-mule/"
+                  onClick="window.open(this.href,'_blank');return false;"
+                  target="_blank"
+                >
+                  <img
+                    src="src\assets\Linkedin.png"
+                    alt=""
+                    className="h-[2vw]"
+                  />
+                </a>{" "}
+                <a
+                  href="https://github.com/Prem-Mule"
+                  onClick="window.open(this.href,'_blank');return false;"
+                  target="_blank"
+                >
+                  <img
+                    src="src\assets\Github.png"
+                    alt=""
+                    className="h-[4vw] mt-[0.7vw]"
+                  />
+                </a>
               </div>
-              <hr className="border-zinc-400 my-[2vw]" />
+              <hr className="border-zinc-400 my-[1.4vw]" />
 
               <div className="details text-zinc-700 font-['oswald'] text-[1.2vw]">
                 <h1>muleprem777@gmail.com</h1> <h1>+91 8208920808</h1>
+              </div>
+              <hr className="border-zinc-400 my-[1vw]" />
+
+              <div className="bg-blue-500 px-[1vw] w-fit py-[0.7vw] rounded-2xl text-[1.5vw] text-white hover:bg-blue-700 transition duration-300">
+                <a
+                  href="src\assets\Prem_Kiran_Mule_Resume.pdf"
+                  download={"Prem's_Resume"}
+                >
+                  {" "}
+                  Download Resume
+                </a>{" "}
               </div>
             </div>
           </div>

@@ -8,3 +8,7 @@
     font-size: 2vw;
   }
 }
+.wrapper:hover {
+  transform: perspective(1800px) rotateX(30deg);
+  transition: all 0.7s ease;
+}

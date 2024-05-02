@@ -1,28 +1,31 @@
+.hero{
+  
+}
 @media (max-width: 1000px) {
   .desc > p {
     font-size: 2vw;
   }
-  .hello > p {
-    font-size: 2.5vw;
+  #hello > p {
+    font-size: 5vw;
   }
 }
 @media (max-width: 600px) {
-  .hero {
+  /* .hero {
     height: 80vh;
     padding-top: 10vh;
-  }
+  } */
 
   #nameprem {
     font-size: 26vw;
   }
-  .hello > p {
+  #hello > p {
     font-size: 3.5vw;
   }
-  .hello {
+  #hello {
     margin-bottom: 5vh;
   }
   .desc {
-    padding-top: 3vh;
+    /* padding-top: 3vh; */
     margin-left: 3vw;
     margin-right: 2vw;
   }
@@ -31,17 +34,54 @@
   }
 }
 
-@media (max-width: 500px) {
-  #name {
-    background-color: red;
+@media (max-width: 400px) {
+  .hero {
+    min-height: fit-content;
   }
   #nameprem {
-    font-size: 26vw;
+    width: 100%;
+    font-size: 25.1vw;
   }
   .desc {
-    padding-top: 3vh;
+    /* padding-top: 3vh; */
     margin-left: 4vw;
     margin-right: 0;
     padding: 0;
+  }
+  .desc > p {
+    font-size: 90vw;
+  }
+
+  #hello > p {
+    font-size: 6vw;
+  }
+  #nameprem {
+    /* margin-top: 24vw; */
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    min-height: fit-content;
+  }
+  #nameprem {
+    width: 100%;
+    font-size: 24vw;
+  }
+  .desc {
+    /* padding-top: 3vh; */
+    margin-left: 4vw;
+    margin-right: 0;
+    padding: 0;
+  }
+  .desc > p {
+    font-size: 3vw;
+  }
+
+  #hello > p {
+    font-size: 6vw;
+  }
+  #nameprem {
+    /* margin-top: 22vw; */
   }
 }

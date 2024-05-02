@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 function Marquee() {
   return (
-    <div className="marquee relative mb-[4vw] min-h-[20vh] bg-zinc-950">
+    <div className="marquee relative mb-[4vw] min-h-[20vh] bg-zinc-950  w-full">
       <div className="  bg-blue-500 flex rotate-[2deg] mt-[-2vw] absolute z-[2]">
         <marquee
           behavior=""
