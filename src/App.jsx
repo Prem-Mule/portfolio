@@ -12,40 +12,48 @@ import ContactMe from "./Components/ContactMe/ContactMe";
 import LocomotiveScroll from "locomotive-scroll";
 import Preloader from "./Components/Preloader/Preloader";
 import Transition from "./Components/Transitions/Transition";
-import FontFaceObserver from "fontfaceobserver";
+import FontFaceObserver from "fontfaceobserver"; // Import FontFaceObserver
 
 function App() {
-  const locomotiveScroll = new LocomotiveScroll();
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const MINIMUM_LOADING_TIME = 3000; // Minimum time to show the preloader (3 seconds)
     const start = Date.now();
+
     const fontA = new FontFaceObserver("august");
     const fontB = new FontFaceObserver("oswald");
-    const handleLoad = () => {
-      const duration = Date.now() - start;
-      if (duration < MINIMUM_LOADING_TIME) {
-        setTimeout(() => {
+
+    // Wait for all fonts to load
+    Promise.all([fontA.load(), fontB.load()])
+      .then(() => {
+        const duration = Date.now() - start;
+        if (duration < MINIMUM_LOADING_TIME) {
+          setTimeout(() => {
+            setLoading(false);
+          }, MINIMUM_LOADING_TIME - duration);
+        } else {
           setLoading(false);
-        }, MINIMUM_LOADING_TIME - duration);
-      } else {
-        setLoading(false);
-      }
-    };
+        }
+      })
+      .catch((err) => {
+        console.error("Font loading failed:", err);
+        setLoading(false); // Fallback to hide preloader if fonts fail to load
+      });
 
-    window.addEventListener("load", handleLoad);
-
+    // Cleanup if needed
     return () => {
-      window.removeEventListener("load", handleLoad);
+      // Add any necessary cleanup here
     };
   }, []);
+
   return (
     <>
       {loading ? (
         <Preloader />
       ) : (
         <div className="animate-fade-in">
-          <div className="app h-full max-w-screen bg-[#0a0a0a]  ">
+          <div className="app h-full max-w-screen bg-[#0a0a0a]">
             <Navigation />
             <Hero />
             <About id="about" />
@@ -60,4 +68,5 @@ function App() {
     </>
   );
 }
+
 export default App;
