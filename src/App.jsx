@@ -12,15 +12,16 @@ import ContactMe from "./Components/ContactMe/ContactMe";
 import LocomotiveScroll from "locomotive-scroll";
 import Preloader from "./Components/Preloader/Preloader";
 import Transition from "./Components/Transitions/Transition";
-// import Preloader from "/Components/Preloader/Preloader";
+import FontFaceObserver from "fontfaceobserver";
+
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const MINIMUM_LOADING_TIME = 3000; // Minimum time to show the preloader (3 seconds)
     const start = Date.now();
-
+    const fontA = new FontFaceObserver("august");
+    const fontB = new FontFaceObserver("oswald");
     const handleLoad = () => {
       const duration = Date.now() - start;
       if (duration < MINIMUM_LOADING_TIME) {
