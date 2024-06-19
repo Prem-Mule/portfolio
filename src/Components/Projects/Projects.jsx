@@ -7,15 +7,15 @@ import "../Projects/Projects.css";
 import greenova from "../assets/greenova.mp4";
 import greenovaThumb from "../assets/greenovass.png";
 import lumine from "../assets/lumine.mp4";
-// import lumine from "../assets/luminess.png";
+import lumineThumb from "../assets/luminess.png";
 import ochidesign from "../assets/ochi.mp4";
-// import ochidesign from "../assets/ochi2ss.png";
+import ochidesignThumb from "../assets/ochi2ss.png";
 import applevision from "../assets/applevision.mp4";
-// import applevision from "../assets/applevisionss.png";
+import applevisionThumb from "../assets/applevisionss.png";
 import auracart from "../assets/auracart.mp4";
-// import auracart from "../assets/ecommercess.png";
+import auracartThumb from "../assets/ecommercess.png";
 import twogood from "../assets/changethecourse.mp4";
-// import twogood from "../assets/twogoodss.png";
+import twogoodThumb from "../assets/twogoodss.png";
 import changethecourse from "../assets/changethecoursess.png";
 
 const Projects = () => {
@@ -80,7 +80,7 @@ const Projects = () => {
                   loop
                   muted
                   playsInline
-                  preload="auto"
+                  preload="metadata"
                   className="w-[100%] h-[28vw]"
                 ></video>
                 {/* <img src={greenova} alt="card1" className="w-[100%] h-[28vw]" /> */}
@@ -135,6 +135,7 @@ const Projects = () => {
                   src={twogood}
                   autoPlay
                   loop
+                  poster={twogoodThumb}
                   muted
                   playsInline
                   preload="metadata"
@@ -215,9 +216,10 @@ const Projects = () => {
                   src={ochidesign}
                   autoPlay
                   loop
+                  poster={ochidesignThumb}
                   muted
                   playsInline
-                  preload="auto"
+                  preload="metadata"
                   className="w-[100%] h-[28vw]"
                 ></video>
                 {/* <img
@@ -278,9 +280,10 @@ const Projects = () => {
                   src={lumine}
                   autoPlay
                   loop
+                  poster={lumineThumb}
                   muted
                   playsInline
-                  preload="auto"
+                  preload="metadata"
                   className="w-[100%] h-[28vw]"
                 ></video>
                 {/* <img
@@ -361,9 +364,10 @@ const Projects = () => {
                   src={auracart}
                   autoPlay
                   loop
+                  poster={auracartThumb}
                   muted
                   playsInline
-                  preload="auto"
+                  preload="metadata"
                   className="w-[100%] h-[28vw]"
                 ></video>
                 {/* <img src={auracart} alt="card1" className="w-[100%] h-[28vw]" /> */}
@@ -420,9 +424,10 @@ const Projects = () => {
                   src={applevision}
                   autoPlay
                   loop
+                  poster={applevisionThumb}
                   muted
                   playsInline
-                  preload="auto"
+                  preload="metadata"
                   className="w-[100%] h-[28vw]"
                 ></video>
                 {/* <img
