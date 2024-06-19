@@ -18,26 +18,29 @@ function Hero() {
       data-scroll-speed="-0.7"
       className="hero text-white font-bold tracking-widest  bg-zinc-950 p-[3vw] min-h-[90vh] max-w-[100%]"
     >
-      <div
-        className="cursor1 w-[4vw] h-[4vw] bg-white blur-md absolute rounded-full translate-x-[-50%] translate-y-[-50%] z-[2] "
-        style={{
-          left: cursorPosition.x,
-          top: cursorPosition.y,
-          opacity: cursorScale,
-          transition: "all  ease-in-out",
-          mixBlendMode: "exclusion",
-        }}
-      ></div>
-      <div
-        className="cursor1 w-[22vw] h-[22vw] bg-amber-500 blur-3xl absolute rounded-full translate-x-[-50%] translate-y-[-50%] z-[0] "
-        style={{
-          left: cursorPosition.x,
-          top: cursorPosition.y,
-          opacity: cursorScale,
-          transition: "all  ease-in-out ",
-          mixBlendMode: "plus-lighter",
-        }}
-      ></div>
+      <div className="cur relative ">
+        <div
+          className="cursor1 w-[4vw] h-[4vw] left-full top-full translate-x-[-50%] translate-y-[-50%]  bg-white blur-md absolute rounded-full  z-[4] "
+          style={{
+            left: cursorPosition.x,
+            top: cursorPosition.y,
+            opacity: cursorScale,
+            transition: "all  ease-in-out",
+            mixBlendMode: "difference",
+          }}
+        ></div>
+        <div
+          className="cursor1 w-[22vw] h-[22vw] left-full top-full translate-x-[-50%] translate-y-[-50%]  bg-amber-500 blur-3xl absolute rounded-full  z-[0] "
+          style={{
+            left: cursorPosition.x,
+            top: cursorPosition.y,
+            opacity: cursorScale,
+            transition: "all  ease-in-out ",
+            mixBlendMode: "lighten",
+          }}
+        ></div>
+      </div>
+
       <div
         className=" mt-[-4vw] flex flex-col justify-evenly    font-['august'] tracking-widest  text-[2vw]  cursor-none px-[3vw] h-[90vh]"
         onMouseMove={(loc) => {

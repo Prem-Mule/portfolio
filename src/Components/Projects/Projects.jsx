@@ -4,12 +4,18 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import "../Projects/Projects.css";
-import greenova from "../assets/greenovass.png";
-import lumine from "../assets/luminess.png";
-import ochidesign from "../assets/ochi2ss.png";
-import applevision from "../assets/applevisionss.png";
-import auracart from "../assets/ecommercess.png";
-import twogood from "../assets/twogoodss.png";
+import greenova from "../assets/greenova.mp4";
+// import greenova from "../assets/greenovass.png";
+import lumine from "../assets/lumine.mp4";
+// import lumine from "../assets/luminess.png";
+import ochidesign from "../assets/ochi.mp4";
+// import ochidesign from "../assets/ochi2ss.png";
+import applevision from "../assets/applevision.mp4";
+// import applevision from "../assets/applevisionss.png";
+import auracart from "../assets/auracart.mp4";
+// import auracart from "../assets/ecommercess.png";
+import twogood from "../assets/changethecourse.mp4";
+// import twogood from "../assets/twogoodss.png";
 import changethecourse from "../assets/changethecoursess.png";
 
 const Projects = () => {
@@ -27,12 +33,15 @@ const Projects = () => {
         </h1>
       </div>
       <div className="projectsContainer px-[5.3vw] ">
-        <div className="cards flex gap-[5vw] mt-10  relative">
+        <div className="cards  flex gap-[5vw] mt-10  relative">
           <div
-            onClick="window.open(this.href,'_blank');return false;"
+            // onClick="window.open(this.href,'_blank');return false;"
+            onClick={() =>
+              window.open("https://prem-mule.github.io/GREENOVA/", "_blank")
+            }
             target="_blank"
             href="https://prem-mule.github.io/GREENOVA/"
-            className="w-1/2 h-[30vw]"
+            className="w-1/2 h-[30vw] hover:cursor-grab"
           >
             {" "}
             <div
@@ -64,7 +73,16 @@ const Projects = () => {
                 transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.7 }}
                 className="card shadow-custom min-w-full min-h-full rounded-lg  overflow-hidden  "
               >
-                <img src={greenova} alt="card1" className="w-[100%] h-[28vw]" />
+                <video
+                  src={greenova}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  className="w-[100%] h-[28vw]"
+                ></video>
+                {/* <img src={greenova} alt="card1" className="w-[100%] h-[28vw]" /> */}
                 <div className=" descr w-[100%] text-[1.3vw] p-[0.4vw] bg-zinc-100 text-zinc-800 font-semibold font-['FoundersGrotesk'] px-[2vw]   text-justify">
                   <p>
                     Greenova - an environmental information system to promote
@@ -75,10 +93,11 @@ const Projects = () => {
             </div>
           </div>
           <div
-            onClick="window.open(this.href,'_blank');return false;"
+            onClick={() =>
+              window.open("https://prem-mule.github.io/Two-Good-Co/", "_blank")
+            }
             target="_blank"
-            href="https://prem-mule.github.io/Two-Good-Co/"
-            className="w-1/2 h-[30vw]"
+            className="w-1/2 h-[30vw] hover:cursor-grab"
           >
             {" "}
             <div
@@ -111,7 +130,16 @@ const Projects = () => {
                 transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.7 }}
                 className="card shadow-custom min-w-full min-h-full rounded-lg  overflow-hidden  flex flex-col"
               >
-                <img src={twogood} alt="card1" className="w-[100%] h-[28vw]" />
+                <video
+                  src={twogood}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  className="w-[100%] h-[28vw]"
+                ></video>
+                {/* <img src={twogood} alt="card1" className="w-[100%] h-[28vw]" /> */}
                 <div className="descr bg-zinc-700 text-[1.3vw] p-[0.4vw] text-zinc-100 font-semibold font-['FoundersGrotesk'] tracking-normal  pl-[2vw] pr-[2vw] text-justify ">
                   <p>
                     {" "}
@@ -142,12 +170,16 @@ const Projects = () => {
         </div>
       </div>
       <div className="px-[5.3vw] mt-[9vw]">
-        <div className="cards flex gap-[6vw] mt-10 ">
+        <div className="cards relative flex gap-[6vw] mt-10 ">
           <div
-            onClick="window.open(this.href,'_blank');return false;"
+            onClick={() =>
+              window.open(
+                "https://ochidesign-showcase-app.onrender.com/",
+                "_blank"
+              )
+            }
             target="_blank"
-            href="https://ochidesign-showcase-app.onrender.com/"
-            className="w-1/2 h-[30vw]"
+            className="w-1/2 h-[30vw] hover:cursor-grab"
           >
             <div
               onMouseEnter={() => {
@@ -178,11 +210,20 @@ const Projects = () => {
                 transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.7 }}
                 className="card shadow-custom min-w-full min-h-full rounded-lg  overflow-hidden  border-[1px] border-zinc-700 flex flex-col"
               >
-                <img
+                <video
+                  src={ochidesign}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  className="w-[100%] h-[28vw]"
+                ></video>
+                {/* <img
                   src={ochidesign}
                   alt="card1"
                   className="w-[100%] h-[28vw] "
-                />{" "}
+                /> */}
                 <div className=" descr bg-zinc-700 text-[1.3vw] p-[0.4vw] text-zinc-100 tracking-normal font-['FoundersGrotesk']   pl-[2vw] pr-[2vw] text-justify">
                   <p>
                     {" "}
@@ -194,10 +235,13 @@ const Projects = () => {
             </div>
           </div>
           <div
-            onClick="window.open(this.href,'_blank');return false;"
-            target="_blank"
-            href="https://prem-mule.github.io/LUMINE-Fashion_Hub/"
-            className="w-1/2 h-[30vw]"
+            onClick={() =>
+              window.open(
+                "https://prem-mule.github.io/LUMINE-Fashion_Hub/",
+                "_blank"
+              )
+            }
+            className="w-1/2 h-[30vw] hover:cursor-grab"
           >
             <div
               onMouseEnter={() => {
@@ -209,7 +253,7 @@ const Projects = () => {
               }}
               className="cardr  relative "
             >
-              <h1 className="lft absolute right-full top-1/2 -translate-y-[50%] translate-x-[50%] z-10 text-[8.3vw] leading-none  font-['FoundersGrotesk'] flex text-[#CDEA68] overflow-hidden ">
+              <h1 className="lft absolute right-full top-1/2 -translate-y-[50%] translate-x-[50%] z-10 text-[8.3vw] leading-none  font-['FoundersGrotesk'] flex text-amber-400 overflow-hidden ">
                 {"LUMINE".split("").map((item, index) => (
                   <motion.span
                     initial={{ y: "100%" }}
@@ -229,11 +273,20 @@ const Projects = () => {
                 transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.7 }}
                 className="card shadow-custom min-w-full min-h-full rounded-lg  overflow-hidden flex flex-col"
               >
-                <img
+                <video
+                  src={lumine}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  className="w-[100%] h-[28vw]"
+                ></video>
+                {/* <img
                   src={lumine}
                   alt="card1"
                   className="w-[100%] h-[28vw] object-cover"
-                />
+                /> */}
                 <div className="descr bg-zinc-100 text-zinc-800 text-[1.3vw] p-[0.4vw] font-['FoundersGrotesk']   pl-[2vw] pr-[2vw] text-justify">
                   <p>
                     {" "}
@@ -244,8 +297,8 @@ const Projects = () => {
               </motion.div>
             </div>
           </div>{" "}
-          <div className="name absolute text-[5vw]  top-1/2 left-[40%] translate-x-[-50%] top-1/2 translate-y-[-50%]">
-            <h1 className="rght absolute flex   z-10 text-[8.3vw] leading-none  font-['FoundersGrotesk'] overflow-hidden  text-[#CDEA68]">
+          <div className="name absolute text-[5vw] left-[40%] top-[40%]  ">
+            <h1 className="rght  flex   z-10 text-[8.3vw] leading-none  font-['FoundersGrotesk'] overflow-hidden  text-amber-400">
               {"SHOWCASE".split("").map((item, index) => (
                 <motion.span
                   initial={{ y: "100%" }}
@@ -266,10 +319,13 @@ const Projects = () => {
       <div className="px-[5.3vw] mt-[9vw]">
         <div className="cards flex gap-[6vw] mt-10  relative">
           <div
-            onClick="window.open(this.href,'_blank');return false;"
-            target="_blank"
-            href="https://aura-cart-store-frontend.vercel.app/"
-            className="w-1/2 h-[30vw]"
+            onClick={() =>
+              window.open(
+                "https://aura-cart-store-frontend.vercel.app/",
+                "_blank"
+              )
+            }
+            className="w-1/2 h-[30vw] hover:cursor-grab"
           >
             <div
               onMouseEnter={() => {
@@ -300,7 +356,16 @@ const Projects = () => {
                 transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.7 }}
                 className="card shadow-custom min-w-full min-h-full rounded-lg  overflow-hidden  border-[1px] border-zinc-700 flex flex-col"
               >
-                <img src={auracart} alt="card1" className="w-[100%] h-[28vw]" />
+                <video
+                  src={auracart}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  className="w-[100%] h-[28vw]"
+                ></video>
+                {/* <img src={auracart} alt="card1" className="w-[100%] h-[28vw]" /> */}
                 <div className="descr bg-zinc-100 text-[1.3vw] p-[0.4vw] text-zinc-800 font-['FoundersGrotesk']   pl-[2vw] pr-[2vw] text-justify">
                   <p>
                     {" "}
@@ -312,10 +377,13 @@ const Projects = () => {
             </div>
           </div>
           <div
-            onClick="window.open(this.href,'_blank');return false;"
-            target="_blank"
-            href="https://prem-mule.github.io/AppleVisionClone-Project/"
-            className="w-1/2 h-[30vw]"
+            onClick={() =>
+              window.open(
+                "https://prem-mule.github.io/AppleVisionClone-Project/",
+                "_blank"
+              )
+            }
+            className="w-1/2 h-[30vw] hover:cursor-grab"
           >
             <div
               onMouseEnter={() => {
@@ -347,11 +415,20 @@ const Projects = () => {
                 transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.7 }}
                 className="card shadow-custom min-w-full min-h-full rounded-lg  overflow-hidden flex flex-col"
               >
-                <img
+                <video
+                  src={applevision}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  className="w-[100%] h-[28vw]"
+                ></video>
+                {/* <img
                   src={applevision}
                   alt="card1"
                   className="w-[100%] h-[28vw] object-cover"
-                />
+                /> */}
                 <div className="descr bg-zinc-700 text-[1.3vw] p-[0.4vw]  text-zinc-100  tracking-normal font-['FoundersGrotesk']   pl-[2vw] pr-[2vw] text-justify">
                   <p>
                     {" "}
