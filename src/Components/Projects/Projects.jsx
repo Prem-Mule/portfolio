@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import "../Projects/Projects.css";
 import greenova from "../assets/greenova.mp4";
-// import greenova from "../assets/greenovass.png";
+import greenovaThumb from "../assets/greenovass.png";
 import lumine from "../assets/lumine.mp4";
 // import lumine from "../assets/luminess.png";
 import ochidesign from "../assets/ochi.mp4";
@@ -75,6 +75,7 @@ const Projects = () => {
               >
                 <video
                   src={greenova}
+                  poster={greenovaThumb}
                   autoPlay
                   loop
                   muted
@@ -136,7 +137,7 @@ const Projects = () => {
                   loop
                   muted
                   playsInline
-                  preload="auto"
+                  preload="metadata"
                   className="w-[100%] h-[28vw]"
                 ></video>
                 {/* <img src={twogood} alt="card1" className="w-[100%] h-[28vw]" /> */}
