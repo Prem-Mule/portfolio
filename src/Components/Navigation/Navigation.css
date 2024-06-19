@@ -1,16 +1,36 @@
 @media (max-width: 500px) {
-  .menu > h1 {
-    font-size: 2vw;
+  .menuitem {
+    font-size: 2.2vw;
   }
   .menu {
     gap: 2vw;
+  }
+  #resume {
+    width: 14vw;
+    height: 4vw;
+    gap: 1vw;
+    background-color: green;
+  }
+  .logoresume {
+    scale: 1.5;
   }
 }
 @media (max-width: 1000px) {
-  .menu > h1 {
-    font-size: 1.8vw;
+  .menuitem {
+    font-size: 1.7vw;
   }
   .menu {
     gap: 2vw;
+  }
+  #resume > h1 {
+    font-size: 2vw;
+  }
+  #resume {
+    width: 14vw;
+    height: 4vw;
+    gap: 1vw;
+  }
+  .logoresume {
+    scale: 1.5;
   }
 }

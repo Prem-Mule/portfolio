@@ -26,9 +26,9 @@ const Projects = () => {
           Featured Projects
         </h1>
       </div>
-      <div className="px-[5.3vw] ">
-        <div className="cards flex gap-[5vw] mt-10 ">
-          <a
+      <div className="projectsContainer px-[5.3vw] ">
+        <div className="cards flex gap-[5vw] mt-10  relative">
+          <div
             onClick="window.open(this.href,'_blank');return false;"
             target="_blank"
             href="https://prem-mule.github.io/GREENOVA/"
@@ -44,7 +44,7 @@ const Projects = () => {
               }}
               className="cardl  relative "
             >
-              <h1 className="rght absolute flex left-full top-1/2 -translate-y-[50%] -translate-x-[30%] z-10 text-[8.3vw] leading-none  font-['FoundersGrotesk'] overflow-hidden  text-[#CDEA68]">
+              {/* <h1 className="rght absolute flex left-full top-1/2 -translate-y-[50%] -translate-x-[30%] z-10 text-[8.3vw] leading-none  font-['FoundersGrotesk'] overflow-hidden  text-[#CDEA68]">
                 {"GREENOVA".split("").map((item, index) => (
                   <motion.span
                     initial={{ y: "100%" }}
@@ -58,7 +58,7 @@ const Projects = () => {
                     {item}
                   </motion.span>
                 ))}
-              </h1>
+              </h1> */}
               <motion.div
                 whileHover={{ scale: 0.9 }}
                 transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.7 }}
@@ -73,8 +73,8 @@ const Projects = () => {
                 </div>
               </motion.div>
             </div>
-          </a>
-          <a
+          </div>
+          <div
             onClick="window.open(this.href,'_blank');return false;"
             target="_blank"
             href="https://prem-mule.github.io/Two-Good-Co/"
@@ -100,7 +100,7 @@ const Projects = () => {
                       ease: [0.22, 1, 0.36, 1],
                       delay: index * 0.1,
                     }}
-                    className="inline-block"
+                    className="inline-block "
                   >
                     {item}
                   </motion.span>
@@ -121,12 +121,29 @@ const Projects = () => {
                 </div>
               </motion.div>
             </div>
-          </a>
+          </div>
+          <div className="name absolute text-[5vw] left-[45%] translate-x-[-50%] top-1/2 translate-y-[-50%]">
+            <h1 className="rght absolute flex left-full top-1/2 -translate-y-[50%] -translate-x-[30%] z-10 text-[8.3vw] leading-none  font-['FoundersGrotesk'] overflow-hidden  text-[#CDEA68]">
+              {"GREENOVA".split("").map((item, index) => (
+                <motion.span
+                  initial={{ y: "100%" }}
+                  animate={isHovering == 1 ? { y: "0%" } : { y: "100%" }}
+                  transition={{
+                    ease: [0.22, 1, 0.36, 1],
+                    delay: index * 0.1,
+                  }}
+                  className="inline-block"
+                >
+                  {item}
+                </motion.span>
+              ))}
+            </h1>{" "}
+          </div>
         </div>
       </div>
       <div className="px-[5.3vw] mt-[9vw]">
         <div className="cards flex gap-[6vw] mt-10 ">
-          <a
+          <div
             onClick="window.open(this.href,'_blank');return false;"
             target="_blank"
             href="https://ochidesign-showcase-app.onrender.com/"
@@ -141,7 +158,7 @@ const Projects = () => {
               }}
               className="cardl relative  "
             >
-              <h1 className="rght absolute flex left-full top-1/2 -translate-y-[50%] -translate-x-[30%] z-10 text-[8.3vw] leading-none  font-['FoundersGrotesk'] overflow-hidden  text-[#CDEA68]">
+              {/* <h1 className="rght absolute flex left-full top-1/2 -translate-y-[50%] -translate-x-[30%] z-10 text-[8.3vw] leading-none  font-['FoundersGrotesk'] overflow-hidden  text-[#CDEA68]">
                 {"SHOWCASE".split("").map((item, index) => (
                   <motion.span
                     initial={{ y: "100%" }}
@@ -155,7 +172,7 @@ const Projects = () => {
                     {item}
                   </motion.span>
                 ))}
-              </h1>
+              </h1> */}
               <motion.div
                 whileHover={{ scale: 0.9 }}
                 transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.7 }}
@@ -175,8 +192,8 @@ const Projects = () => {
                 </div>
               </motion.div>
             </div>
-          </a>
-          <a
+          </div>
+          <div
             onClick="window.open(this.href,'_blank');return false;"
             target="_blank"
             href="https://prem-mule.github.io/LUMINE-Fashion_Hub/"
@@ -226,12 +243,29 @@ const Projects = () => {
                 </div>
               </motion.div>
             </div>
-          </a>
+          </div>{" "}
+          <div className="name absolute text-[5vw]  top-1/2 left-[40%] translate-x-[-50%] top-1/2 translate-y-[-50%]">
+            <h1 className="rght absolute flex   z-10 text-[8.3vw] leading-none  font-['FoundersGrotesk'] overflow-hidden  text-[#CDEA68]">
+              {"SHOWCASE".split("").map((item, index) => (
+                <motion.span
+                  initial={{ y: "100%" }}
+                  animate={isHovering == 3 ? { y: "0%" } : { y: "100%" }}
+                  transition={{
+                    ease: [0.22, 1, 0.36, 1],
+                    delay: index * 0.1,
+                  }}
+                  className="inline-block"
+                >
+                  {item}
+                </motion.span>
+              ))}
+            </h1>
+          </div>
         </div>
       </div>
       <div className="px-[5.3vw] mt-[9vw]">
-        <div className="cards flex gap-[6vw] mt-10 ">
-          <a
+        <div className="cards flex gap-[6vw] mt-10  relative">
+          <div
             onClick="window.open(this.href,'_blank');return false;"
             target="_blank"
             href="https://aura-cart-store-frontend.vercel.app/"
@@ -246,7 +280,7 @@ const Projects = () => {
               }}
               className="cardl relative  "
             >
-              <h1 className="rght absolute flex left-full top-1/2 -translate-y-[50%] -translate-x-[30%] z-10 text-[8.3vw] leading-none  font-['FoundersGrotesk'] overflow-hidden  text-[#CDEA68]">
+              {/* <h1 className="rght absolute flex left-full top-1/2 -translate-y-[50%] -translate-x-[30%] z-10 text-[8.3vw] leading-none  font-['FoundersGrotesk'] overflow-hidden  text-[#CDEA68]">
                 {"AURACART".split("").map((item, index) => (
                   <motion.span
                     initial={{ y: "100%" }}
@@ -260,7 +294,7 @@ const Projects = () => {
                     {item}
                   </motion.span>
                 ))}
-              </h1>
+              </h1> */}
               <motion.div
                 whileHover={{ scale: 0.9 }}
                 transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.7 }}
@@ -276,8 +310,8 @@ const Projects = () => {
                 </div>
               </motion.div>
             </div>
-          </a>
-          <a
+          </div>
+          <div
             onClick="window.open(this.href,'_blank');return false;"
             target="_blank"
             href="https://prem-mule.github.io/AppleVisionClone-Project/"
@@ -327,7 +361,24 @@ const Projects = () => {
                 </div>
               </motion.div>
             </div>
-          </a>
+          </div>
+          <div className="name absolute text-[5vw]  top-1/2 left-[45%] translate-x-[-50%] translate-y-[-50%]">
+            <h1 className="rght absolute flex left-full top-1/2 -translate-y-[50%] -translate-x-[30%] z-10 text-[8.3vw] leading-none  font-['FoundersGrotesk'] overflow-hidden  text-[#CDEA68]">
+              {"AURACART".split("").map((item, index) => (
+                <motion.span
+                  initial={{ y: "100%" }}
+                  animate={isHovering == 5 ? { y: "0%" } : { y: "100%" }}
+                  transition={{
+                    ease: [0.22, 1, 0.36, 1],
+                    delay: index * 0.1,
+                  }}
+                  className="inline-block"
+                >
+                  {item}
+                </motion.span>
+              ))}
+            </h1>
+          </div>
         </div>
       </div>
     </div>

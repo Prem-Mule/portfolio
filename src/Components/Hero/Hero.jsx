@@ -19,23 +19,23 @@ function Hero() {
       className="hero text-white font-bold tracking-widest  bg-zinc-950 p-[3vw] min-h-[90vh] max-w-[100%]"
     >
       <div
-        className="cursor1 w-[6vw] h-[6vw] bg-white blur-lg absolute rounded-full translate-x-[-50%] translate-y-[-50%] z-[2] "
+        className="cursor1 w-[4vw] h-[4vw] bg-white blur-md absolute rounded-full translate-x-[-50%] translate-y-[-50%] z-[2] "
         style={{
           left: cursorPosition.x,
           top: cursorPosition.y,
           opacity: cursorScale,
           transition: "all  ease-in-out",
-          mixBlendMode: "difference",
+          mixBlendMode: "exclusion",
         }}
       ></div>
       <div
-        className="cursor1 w-[16vw] h-[16vw] bg-yellow-300 blur-3xl absolute rounded-full translate-x-[-50%] translate-y-[-50%] z-[0] "
+        className="cursor1 w-[22vw] h-[22vw] bg-amber-500 blur-3xl absolute rounded-full translate-x-[-50%] translate-y-[-50%] z-[0] "
         style={{
           left: cursorPosition.x,
           top: cursorPosition.y,
           opacity: cursorScale,
-          transition: "all  ease-in-out",
-          mixBlendMode: "difference",
+          transition: "all  ease-in-out ",
+          mixBlendMode: "plus-lighter",
         }}
       ></div>
       <div

@@ -6,6 +6,8 @@
   .cards {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20vw;
   }
   .cardl,
   .cardr {
@@ -54,4 +56,9 @@
 }
 .cardr:hover {
   transform: perspective(1600px) rotateY(15deg) rotateX(15deg);
+}
+h1 {
+  position: relative;
+
+  z-index: 100;
 }
